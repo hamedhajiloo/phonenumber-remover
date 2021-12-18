@@ -1,4 +1,4 @@
-﻿using System.Text.RegularExpressions;
+﻿using Service;
 
 while (true)
 {
@@ -8,9 +8,7 @@ while (true)
     if (input == "quit") break;
     if (input is null) continue;
 
-    var rejex = new Regex(@"(\+98|0)?9\d{9}");
-    var result = rejex.Replace(input, "");
-    Console.WriteLine($"result: {result}");
+    Console.WriteLine($"result: {PhoneService.RemovePhones(input)}");
     Console.WriteLine("_____________________");
     Console.WriteLine();
 }
