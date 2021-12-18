@@ -8,7 +8,7 @@ while (true)
     if (input == "quit") break;
     if (input is null) continue;
 
-    Console.WriteLine($"result: {PhoneService.RemovePhones(input)}");
+    Console.WriteLine($"result: {PhoneUtils.RemovePhones(input)}");
     Console.WriteLine("_____________________");
     Console.WriteLine();
 }
