@@ -60,5 +60,13 @@ namespace PhoneRemover.Test
             Assert.AreEqual(result2, "");
             Assert.AreEqual(result3, "");
         }
+
+        [TestMethod]
+        public void RemovePhones_WrongPhoneNumbers_ReturnSame()
+        {
+            var result1 = PhoneService.RemovePhones($"{Phone4}");
+
+            Assert.AreEqual(result1, $"{Phone4}");
+        }
     }
 }
