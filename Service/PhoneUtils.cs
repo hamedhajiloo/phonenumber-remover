@@ -10,7 +10,6 @@ namespace Service
             var firstResult = enRegex.Replace(message, "");
 
             var faRegex = new Regex(@"(\+۹۸|۰)?۹(۰|۱|۲|۳|۴|۵|۶|۷|۸|۹){9}");
-            var a = faRegex.Matches(firstResult);
             var result = faRegex.Replace(firstResult, "");
 
             return result;
